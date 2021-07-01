@@ -1,22 +1,7 @@
-import { router } from "./router";
+// import { router } from "./router";
 
 export default class App {
   constructor() {
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.addEventListener("click", (e) => {
-        if (e.target.matches("[data-link]")) {
-          e.preventDefault();
-          history.pushState(null, null, e.target.getAttribute("data-link"));
-          router();
-        }
-      });
-      router();
-    });
-
-    window.addEventListener("popstate", () => {
-      router();
-    });
-
     const header = document.createElement("div");
     const root = document.getElementById("root");
     header.innerHTML = `
