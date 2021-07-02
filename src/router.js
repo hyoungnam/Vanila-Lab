@@ -19,7 +19,7 @@ export default class Router {
     this.routePages.set(path, page)
   }
   route() {
-    const body = document.getElementById("body");
-    body.innerHTML = this.routePages.get(window.location.pathname);
+    const page = this.routePages.get(window.location.pathname);
+    new page();
   };
 }

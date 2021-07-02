@@ -3,7 +3,7 @@ import Router from './router';
 import Home from "./pages/Home";
 import About from "./pages/About";
 
-new App();
+const app = new App();
 const router = new Router();
 
 router.addRoutePath('/', Home)
